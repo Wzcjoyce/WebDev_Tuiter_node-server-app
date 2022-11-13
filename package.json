@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Fall 2022 CS5610 Web Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "Rest",
+    "Server",
+    "HTTP"
+  ],
+  "author": "Zuocheng Wang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
