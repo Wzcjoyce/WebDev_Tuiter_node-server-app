@@ -5,7 +5,7 @@
   "description": "Fall 2022 CS5610 Web Development",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "keywords": [
     "Node",
