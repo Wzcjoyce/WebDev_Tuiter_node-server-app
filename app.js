@@ -6,10 +6,11 @@ import UserController
 import TuitsController
     from "./controllers/tuits/tuits-controller.js";
 import cors from 'cors'
-const app = express()
+import mongoose from "mongoose";const app = express()
 app.use(cors())
 app.use(express.json());
 TuitsController(app);
 HelloController(app)
 UserController(app)
 app.listen(process.env.PORT || 4000);
+mongoose.connect('mongodb://localhost:27017/tuiter');
