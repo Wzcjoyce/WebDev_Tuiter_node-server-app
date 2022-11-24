@@ -13,25 +13,18 @@ const findTuits = async (req, res) => {
 }
 
 
-
-const findUserById = (req, res) => {
-    const userId = req.params.uid;
-    const user = users
-        .find(u => u._id === userId);
-    res.json(user);
-}
-
 const createTuit =  async  (req, res) => {
     const newTuit = req.body;
-    newTuit.likes = 0;
+    newTuit.likes = 100;
     newTuit.liked = false;
     newTuit.dislikes = 10;
     newTuit.replies = 20;
     newTuit.retuits = 30;
-    newTuit.avatar = 'nasa.jpeg';
-    newTuit.userName = "Tesla";
-    newTuit.handle = "@tesla";
+    newTuit.avatar = '/images/spacexlogo.jpg';
+    newTuit.userName = "SpaceX";
+    newTuit.handle = "@spacex";
     newTuit.time = "1h";
+
     const insertedTuit = await tuitsDao
         .createTuit(newTuit);
     res.json(insertedTuit);
