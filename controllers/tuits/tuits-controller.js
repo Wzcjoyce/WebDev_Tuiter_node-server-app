@@ -20,7 +20,7 @@ const createTuit =  async  (req, res) => {
     newTuit.dislikes = 10;
     newTuit.replies = 20;
     newTuit.retuits = 30;
-    newTuit.avatar = '/images/spacexlogo.jpg';
+    newTuit.image = '/images/spacexlogo.jpg';
     newTuit.userName = "SpaceX";
     newTuit.handle = "@spacex";
     newTuit.time = "1h";
@@ -31,15 +31,15 @@ const createTuit =  async  (req, res) => {
 }
 
 const deleteTuit = async (req, res) => {
-    const tuitdIdToDelete  = req.params.uid;
+    const tuitdIdToDelete  = req.params.tid;
     const status = await tuitsDao
         .deleteTuit(tuitdIdToDelete);
-    res.sendStatus(status);
+    res.json(status);
 }
 
 
 const updateTuit  = async  (req, res) => {
-    const tuitdIdToUpdate  = req.params.uid;
+    const tuitdIdToUpdate  = req.params.tid;
     const updates = req.body;
 
     const status = await tuitsDao

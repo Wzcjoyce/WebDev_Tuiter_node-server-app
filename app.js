@@ -12,7 +12,7 @@ import mongoose from "mongoose";
 const app = express()
 
 const DbUrl = 'mongodb+srv://wzcjoyce:Wzc911101joyce0915@cluster0.4xfw5pl.mongodb.net/?retryWrites=true&w=majority';
-// const DbUrl = 'mongodb://127.0.0.1:27017/tuiter';
+//const DbUrl = 'mongodb://127.0.0.1:27017/tuiter';
 mongoose.connect(DbUrl)
     .then(() => console.log('DB started'))
     .catch(() => () => console.log(error.message));

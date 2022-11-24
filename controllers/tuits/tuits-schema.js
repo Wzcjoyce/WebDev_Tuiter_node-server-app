@@ -6,7 +6,7 @@ const schema = mongoose.Schema({
     dislikes: Number,
     replies: Number,
     retuits: Number,
-    avatar: String,
+    image: String,
     userName: String,
     handle: String,
     time: String,
